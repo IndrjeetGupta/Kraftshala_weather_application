@@ -35,3 +35,41 @@
     font-size: larger;
 
 }
+
+.temp{
+    height: 100px;
+    background-color: aqua;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 100px; */
+}
+.city{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}
+
+.tempC{
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+
+}
+
+.grid {
+
+    margin-top: 12.5px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2 ,1fr);
+    margin-left: 400px;
+    margin-right: 400px;
+    margin: auto;
+}
+.tempdiv{
+    border-radius: 20px;
+    margin-top: 50px;
+    height: 100px;
+    background-color: aqua;
+    width: 300px;
+}

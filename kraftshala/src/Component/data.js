@@ -28,31 +28,11 @@ const API_KEY = '58dd7367d80d378561ca0e8befa43a20'
         country
     }
 
-      
-  
     }
     catch(err){
+        alert('plz enter correct city ')
+        
         console.log(err)
     }
+    
 }
-
-
-
-// feels_like
-// : 
-// 296.83
-// humidity
-// : 
-// 82
-// pressure
-// : 
-// 1014
-// temp
-// : 
-// 296.32
-// temp_max
-// : 
-// 296.95
-// temp_min
-// : 
-// 295.55
