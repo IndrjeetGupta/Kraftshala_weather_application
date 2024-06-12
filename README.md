@@ -28,3 +28,14 @@
 <h2>Mobile View</h2>
 
 <img src="./kraftshala/src/images/mobile.png">
+
+<h2>Approach</h2>
+<P>XML was used to create the structure of the application.</P>
+<P>CSS was used to style the application, ensuring a responsive and visually appealing design.</P>
+<P>JavaScript and React was used to handle API integration, DOM manipulation, and state management.</P>
+<p>The application integrates with the Open Weather API to fetch real-time weather data</p>
+<P>Dark/Light Mode: Implemented using React hook to manage the theme state and CSS to apply the styles.</P>
+
+<h2>Known Issues and Limitations</h2>
+<p>API Rate Limiting: Excessive API requests may lead to rate limiting.</p>
+<P>Geolocation: May not work accurately in some regions.</P>
