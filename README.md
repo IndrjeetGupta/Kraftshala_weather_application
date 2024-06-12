@@ -16,3 +16,15 @@
 <h2>Dark Mood desktop View</h2>
 
 <img src="./kraftshala/src/images/darkmoodDesktop.png">
+
+<h2>Light Mood desktop View</h2>
+
+<img src="./kraftshala/src/images/LlighmoodDasktop.png">
+
+<h2>Tab View</h2>
+
+<img src="./kraftshala/src/images/tablet.png">
+
+<h2>Mobile View</h2>
+
+<img src="./kraftshala/src/images/mobile.png">
