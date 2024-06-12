@@ -64,7 +64,7 @@ function Home({toggleFun, toggle}) {
 
                 <div  className={toggle ? "tempBlack" : "tempWhite"}>
                     <p className='city'>Location {weatherData.name}</p>
-                    <p className='tempC'>Temperature {tempeture} °C</p>
+                    <p className='tempC'>Temperature {tempeture}°C</p>
 
 
                 </div>
@@ -72,9 +72,9 @@ function Home({toggleFun, toggle}) {
                 <div className='grid'>
                 <div  className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Date {currentTime.toLocaleDateString()}</p> </div>
                 <div  className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Time {currentTime.toLocaleTimeString()}</p> </div>
-                    <div  className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Min {minTemp} °C</p> </div>
-                    <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Max {maxTemp} °C</p></div>
-                    <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Feels Like {feelsLike} °C</p></div>   
+                    <div  className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Min {minTemp}°C</p> </div>
+                    <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Max {maxTemp}°C</p></div>
+                    <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Feels Like {feelsLike}°C</p></div>   
                     <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Pressure {pressure} hpa</p></div>
                     <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Humidity {humidity} %</p></div>
                     <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Wind {windSpeed} mph</p></div>

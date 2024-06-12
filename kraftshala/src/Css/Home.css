@@ -5,12 +5,14 @@
     padding-top: 10px;
     padding-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom: black;
 }
 .weatherBlack{
     font-family: 'Courier New', Courier, monospace;
     padding-top: 10px;
     padding-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom: black;
 }
 .section_inputBack{
     height: 100px;
