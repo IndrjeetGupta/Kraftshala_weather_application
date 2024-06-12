@@ -185,7 +185,7 @@
 
     .tempdivblack{
         border-radius: 20px;
-        margin-top: 30px;
+        margin-top: 45px;
         height: 80px;
         background-color: white;
         width: 250px;
@@ -196,7 +196,7 @@
     .tempdivwhite{
     
         border-radius: 20px;
-        margin-top: 50px;
+        margin-top: 45px;
         height: 80px;
         background-color: black;
         width: 250px;
@@ -207,7 +207,7 @@
     .input{
         margin-top: 25px;
         margin-bottom: 25px;
-        width: 200px;
+        width: 180px;
         border-radius: 10px;
         /* border: none; */
         font-family: 'Courier New', Courier, monospace;
@@ -217,7 +217,7 @@
     .btn{
         margin-top: 25px;
         margin-bottom: 25px;
-        width: 80px;
+        width: 60px;
         border-radius: 10px;
         /* border: none; */
         font-family: 'Courier New', Courier, monospace;
