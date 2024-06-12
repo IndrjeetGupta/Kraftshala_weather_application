@@ -4,23 +4,44 @@
 
  
 } */
-.section_input{
-    /* width: 200%; */
+
+.weatherWhite{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.weatherBlack{
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.section_inputBack{
     height: 100px;
-    background-color: aqua;
-    /* margin-top: 50px; */
+    background-color: white;
     display: flex;
     justify-content: space-evenly;
-    /* gap: 100px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
    
 }
+.section_inputWhite{
+    height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
 
 .input{
     margin-top: 25px;
     margin-bottom: 25px;
     width: 300px;
     border-radius: 10px;
-    border: none;
+    /* border: none; */
     font-family: 'Courier New', Courier, monospace;
     font-size: larger;
 
@@ -30,19 +51,30 @@
     margin-bottom: 25px;
     width: 100px;
     border-radius: 10px;
-    border: none;
+    /* border: none; */
     font-family: 'Courier New', Courier, monospace;
     font-size: larger;
 
 }
 
-.temp{
+.tempBlack{
     height: 100px;
-    background-color: aqua;
+    background-color: white;
     margin-top: 50px;
     display: flex;
     justify-content: space-evenly;
-    /* gap: 100px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.tempWhite{
+    color: white;
+    height: 100px;
+    background-color: black;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 .city{
     font-family: 'Courier New', Courier, monospace;
@@ -57,19 +89,121 @@
 }
 
 .grid {
-
+    width: 90%;
     margin-top: 12.5px;
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(2 ,1fr);
-    margin-left: 400px;
-    margin-right: 400px;
+
     margin: auto;
 }
-.tempdiv{
+.tempdivblack{
+    border-radius: 20px;
+    margin-top: 30px;
+    height: 80px;
+    background-color: white;
+    width: 350px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 10px;
+}
+
+.tempdivwhite{
+
     border-radius: 20px;
     margin-top: 50px;
-    height: 100px;
-    background-color: aqua;
-    width: 300px;
+    height: 80px;
+    background-color: black;
+    width: 350px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
+.tempdivblack > p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+    margin-top: 22px;
+    
+}
+.tempdivwhite > p{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+    margin-top: 22px;
+
+
+}
+@media(max-width : 768px){
+    .grid {
+        width: 100%;
+        margin-top: 12.5px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(1 ,1fr);
+    
+        margin: auto;
+    }
+    
+}
+
+@media(max-width : 360px){
+    .grid {
+        width: 100%;
+        margin-top: 12.5px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(1 ,1fr);
+    
+        margin: auto;
+    }
+
+    .city{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: larger;
+        margin-top: 40px;
+    }
+    
+    .tempC{
+    
+        font-family: 'Courier New', Courier, monospace;
+        font-size: larger;
+        margin-top: 40px;
+    
+    }
+
+    .tempdivblack > p {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: larger;
+        margin-top: 30px;
+        
+    }
+    .tempdivwhite > p{
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: large;
+        margin-top: 30px;
+    
+    
+    }
+
+    .tempdivblack{
+        border-radius: 20px;
+        margin-top: 30px;
+        height: 80px;
+        background-color: white;
+        width: 250px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-bottom: 10px;
+    }
+    
+    .tempdivwhite{
+    
+        border-radius: 20px;
+        margin-top: 50px;
+        height: 80px;
+        background-color: black;
+        width: 250px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    }
+    
+}
+

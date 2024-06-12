@@ -27,22 +27,47 @@ function Home({toggleFun, toggle}) {
 
         }
     }
+
+    // name,
+    // temp,
+    // feels_like,
+    // humidity,
+    // pressure,
+    // temp_max,
+    // temp_min,
+    // speed,
+    // deg,
+    // country
     const tempeture = Math.round(weatherData.temp-273.15)
+    const minTemp = Math.round(weatherData.temp_min-273.15)
+    const maxTemp = Math.round(weatherData.temp_max-273.15)
+    const feelsLike =  Math.round(weatherData.feels_like-273.15)
+    const pressure = Math.round(weatherData.pressure)
+    const humidity = Math.round(weatherData.humidity)
+    const windSpeed = Math.round(weatherData.speed)
+
+    // className={openSidebarToggle ? "sidebar-responsive": ""}
      
   return (
     <div>
         <div className='overlay'>
             <div className='container'>
-                <div className='section_input'>
-                    <input className='input' onKeyDown={cityFun} type="text" name="city" id=""  placeholder='     Enter City'/>
+                <div  className={toggle ? 'weatherBlack' : 'weatherWhite'}>
+                <h1  >Weather Application</h1>
 
+                </div>
+               
+                    
+                
+                <div  className={toggle ? "section_inputBack" : "section_inputWhite"}  >
+                    <input className='input' onKeyDown={cityFun} type="text" name="city" id=""  placeholder='     Enter City'/>
                     <button className='btn' onClick={toggleFun}>{toggle ?  <MdDarkMode/> : <CiBrightnessUp/> } </button>
                    
                     
 
                 </div>
 
-                <div className='temp'>
+                <div  className={toggle ? "tempBlack" : "tempWhite"}>
                     <p className='city'>City {weatherData.name}</p>
                     <p className='tempC'>Temp {tempeture} °C</p>
 
@@ -51,14 +76,17 @@ function Home({toggleFun, toggle}) {
 
                 <div className='grid'>
 
-                    <div className='tempdiv'><p>hi</p>
-
+                    <div  className={toggle ? 'tempdivblack' : 'tempdivwhite' } >
+                        <p>Min {minTemp} °C</p>
+                        
+                        
                     </div>
-                    <div className='tempdiv'>hi</div>
-                    <div className='tempdiv'>hi</div>
-                    <div className='tempdiv'>hi</div>
-                    <div className='tempdiv'>hi</div>
-                    <div className='tempdiv'>hi</div>
+                    <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Max {maxTemp} °C</p></div>
+                    <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Feels Like {feelsLike} °C</p></div>
+                        
+                    <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Pressure {pressure} hpa</p></div>
+                    <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Humidity {humidity} %</p></div>
+                    <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Wind {windSpeed} mph</p></div>
 
                     
                 </div>
