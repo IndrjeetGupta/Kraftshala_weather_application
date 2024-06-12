@@ -69,6 +69,7 @@ function Home({toggleFun, toggle}) {
 
                 </div>
 
+
                 <div className='grid'>
                 <div  className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Date {currentTime.toLocaleDateString()}</p> </div>
                 <div  className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Time {currentTime.toLocaleTimeString()}</p> </div>
