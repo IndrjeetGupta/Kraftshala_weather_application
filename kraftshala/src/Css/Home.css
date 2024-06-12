@@ -1,9 +1,3 @@
-/* .container{
-   display: grid;
-   justify-content: center;
-
- 
-} */
 
 .weatherWhite{
     color: white;
@@ -41,7 +35,6 @@
     margin-bottom: 25px;
     width: 300px;
     border-radius: 10px;
-    /* border: none; */
     font-family: 'Courier New', Courier, monospace;
     font-size: larger;
 
@@ -51,7 +44,6 @@
     margin-bottom: 25px;
     width: 100px;
     border-radius: 10px;
-    /* border: none; */
     font-family: 'Courier New', Courier, monospace;
     font-size: larger;
 
@@ -202,6 +194,27 @@
         background-color: black;
         width: 250px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    }
+
+    .input{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        width: 200px;
+        border-radius: 10px;
+        /* border: none; */
+        font-family: 'Courier New', Courier, monospace;
+        font-size: larger;
+    
+    }
+    .btn{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        width: 80px;
+        border-radius: 10px;
+        /* border: none; */
+        font-family: 'Courier New', Courier, monospace;
+        font-size: larger;
     
     }
     

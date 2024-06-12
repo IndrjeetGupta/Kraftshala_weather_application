@@ -9,6 +9,17 @@ function Home({toggleFun, toggle}) {
 
     const [weatherData , setWeatherData] = useState([])
     const [city , setCity] =useState('bengaluru')
+    const [currentTime, setCurrentTime] = useState(new Date());
+
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setCurrentTime(new Date());
+      }, 1000);
+  
+      // Cleanup interval on component unmount
+      return () => clearInterval(timer);
+    }, []);
+
     
     useEffect(() =>{
         const fetchData = async() =>{
@@ -28,16 +39,6 @@ function Home({toggleFun, toggle}) {
         }
     }
 
-    // name,
-    // temp,
-    // feels_like,
-    // humidity,
-    // pressure,
-    // temp_max,
-    // temp_min,
-    // speed,
-    // deg,
-    // country
     const tempeture = Math.round(weatherData.temp-273.15)
     const minTemp = Math.round(weatherData.temp_min-273.15)
     const maxTemp = Math.round(weatherData.temp_max-273.15)
@@ -45,8 +46,6 @@ function Home({toggleFun, toggle}) {
     const pressure = Math.round(weatherData.pressure)
     const humidity = Math.round(weatherData.humidity)
     const windSpeed = Math.round(weatherData.speed)
-
-    // className={openSidebarToggle ? "sidebar-responsive": ""}
      
   return (
     <div>
@@ -58,32 +57,24 @@ function Home({toggleFun, toggle}) {
                 </div>
                
                     
-                
                 <div  className={toggle ? "section_inputBack" : "section_inputWhite"}  >
                     <input className='input' onKeyDown={cityFun} type="text" name="city" id=""  placeholder='     Enter City'/>
                     <button className='btn' onClick={toggleFun}>{toggle ?  <MdDarkMode/> : <CiBrightnessUp/> } </button>
-                   
-                    
-
                 </div>
 
                 <div  className={toggle ? "tempBlack" : "tempWhite"}>
-                    <p className='city'>City {weatherData.name}</p>
-                    <p className='tempC'>Temp {tempeture} °C</p>
+                    <p className='city'>Location {weatherData.name}</p>
+                    <p className='tempC'>Temperature {tempeture} °C</p>
 
 
                 </div>
 
                 <div className='grid'>
-
-                    <div  className={toggle ? 'tempdivblack' : 'tempdivwhite' } >
-                        <p>Min {minTemp} °C</p>
-                        
-                        
-                    </div>
+                <div  className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Date {currentTime.toLocaleDateString()}</p> </div>
+                <div  className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Time {currentTime.toLocaleTimeString()}</p> </div>
+                    <div  className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Min {minTemp} °C</p> </div>
                     <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Max {maxTemp} °C</p></div>
-                    <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Feels Like {feelsLike} °C</p></div>
-                        
+                    <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Feels Like {feelsLike} °C</p></div>   
                     <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Pressure {pressure} hpa</p></div>
                     <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Humidity {humidity} %</p></div>
                     <div className={toggle ? 'tempdivblack' : 'tempdivwhite' } ><p>Wind {windSpeed} mph</p></div>
