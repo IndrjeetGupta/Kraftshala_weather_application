@@ -59,6 +59,7 @@
     justify-content: space-evenly;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 
 .tempWhite{
@@ -75,12 +76,14 @@
 .city{
     font-family: 'Courier New', Courier, monospace;
     font-size: xx-large;
+
 }
 
 .tempC{
 
     font-family: 'Courier New', Courier, monospace;
     font-size: xx-large;
+ 
 
 }
 
@@ -154,14 +157,14 @@
     .city{
         font-family: 'Courier New', Courier, monospace;
         font-size: larger;
-        margin-top: 40px;
+        margin-top: 30px;
     }
     
     .tempC{
     
         font-family: 'Courier New', Courier, monospace;
         font-size: larger;
-        margin-top: 40px;
+        margin-top: 30px;
     
     }
 
@@ -221,6 +224,8 @@
         font-size: larger;
     
     }
+
+
     
 }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { MdDarkMode } from "react-icons/md";
 import { CiBrightnessUp } from "react-icons/ci";
 
@@ -9,9 +9,12 @@ function Home({toggleFun, toggle}) {
 
     const [weatherData , setWeatherData] = useState([])
     const [city , setCity] =useState('bengaluru')
+    const [loading , setLoading] = useState(true)
     const [currentTime, setCurrentTime] = useState(new Date());
+    // console.log(city)
 
     useEffect(() => {
+        console.log('render')
       const timer = setInterval(() => {
         setCurrentTime(new Date());
       }, 1000);
@@ -22,14 +25,23 @@ function Home({toggleFun, toggle}) {
 
     
     useEffect(() =>{
+        setLoading(true)
         const fetchData = async() =>{
             const data = await newfetchData(city)
             console.log(data)
             setWeatherData(data)
+            setLoading(false)
+           
+           
         }
         fetchData()
+       
+       
 
     },[city])
+
+   
+    
 
    
     const cityFun = (e) =>{
@@ -46,6 +58,10 @@ function Home({toggleFun, toggle}) {
     const pressure = Math.round(weatherData.pressure)
     const humidity = Math.round(weatherData.humidity)
     const windSpeed = Math.round(weatherData.speed)
+
+    if (loading){
+        return <h1 style={{textAlign : "center"}}>Loading</h1>
+    }
      
   return (
     <div>
@@ -55,6 +71,7 @@ function Home({toggleFun, toggle}) {
                 <h1  style={{textAlign:"center"}} >Weather Application</h1>
 
                 </div>
+                {}
                
                     
                 <div  className={toggle ? "section_inputBack" : "section_inputWhite"}  >
