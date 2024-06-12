@@ -11,7 +11,7 @@ function App() {
   }
 
   return (
-    <div className="App" style={{backgroundColor : toggle ? "white" : "lightblue" , height : '200vh'}}>
+    <div >
       <Home toggleFun={toggleFun} toggle={toggle}/>
 
     </div>

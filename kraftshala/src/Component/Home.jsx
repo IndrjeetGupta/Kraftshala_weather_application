@@ -52,7 +52,7 @@ function Home({toggleFun, toggle}) {
         <div className='overlay'>
             <div className='container'>
                 <div  className={toggle ? 'weatherBlack' : 'weatherWhite'}>
-                <h1  >Weather Application</h1>
+                <h1  style={{textAlign:"center"}} >Weather Application</h1>
 
                 </div>
                
