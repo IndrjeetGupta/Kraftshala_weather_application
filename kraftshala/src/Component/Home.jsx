@@ -75,7 +75,7 @@ function Home({toggleFun, toggle}) {
                
                     
                 <div  className={toggle ? "section_inputBack" : "section_inputWhite"}  >
-                    <input className='input' onKeyDown={cityFun} type="text" name="city" id=""  placeholder='     Enter City'/>
+                    <input className='input' onKeyDown={cityFun} type="text" name="city" id=""  placeholder='  Enter City'/>
                     <button className='btn' onClick={toggleFun}>{toggle ?  <MdDarkMode/> : <CiBrightnessUp/> } </button>
                 </div>
 
